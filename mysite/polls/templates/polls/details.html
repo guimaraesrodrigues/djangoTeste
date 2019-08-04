@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{question.id}}</title>
+</head>
+<body>
+    <h1>Question: {{question}}</h1>
+    <ul>
+        {% for choice in question.choice_set.all %}
+        <li>{{choice.choice_text}} <input type="checkbox" name="opcao" value="{{valor}}"></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">volta la</a>
+</body>
+</html>
